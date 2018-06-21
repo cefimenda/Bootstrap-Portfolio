@@ -1,0 +1,45 @@
+body{
+    background-image: url("../images/background-pattern.png");
+}
+
+.pageName{
+    background-color: #4aaaa5;
+    color: white;
+    font-size: 30px;
+    font-family: 'Georgia', "Times", "Times New Roman", "serif";
+
+}
+.nav-item{
+    border-right: 1px solid #8d8c8ca4;
+}
+
+.footer{
+    background-color:#666666;
+    border-top: 5px solid #4aaaa5;
+}
+.card{
+    background:#4aaaa5;
+    color: white;
+}
+button[type = "submit"]{
+    background: #4aaaa5;
+    color: white;
+    border: 0px;
+}
+button[type = "submit"]:hover{
+    background: #3a8683;
+    color: white;
+}
+.mb-4{
+    font-family: 'Georgia', "Times", "Times New Roman", "serif";
+}
+body{
+    font-family: 'Arial', 'Helvetica Neue', "Helvetica", "sans-serif";
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-item:last-child{
+        border-right: 0px;
+    }
+
+}
