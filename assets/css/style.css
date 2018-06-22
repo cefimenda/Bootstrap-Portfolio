@@ -1,6 +1,12 @@
 body{
     background-image: url("../images/background-pattern.png");
 }
+.row:not(:last-of-type){
+    animation:none;
+    animation-name:fade-in;
+    animation-duration:1s;
+    animation-timing-function: ease-in-out;
+}
 
 .pageName{
     background-color: #4aaaa5;
@@ -41,12 +47,15 @@ body{
     .nav-item:last-child{
         border-right: 0px;
     }
-
 }
 @media only screen and (max-width: 640px) {
-
     .pageName{
     width:100%;
     }
 
+}
+
+@keyframes fade-in{
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
