@@ -1,59 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script src="javascript.js"></script>
     <title>Cefi Menda Portfolio</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <!-- this navbar is a placeholder to avoid item overlap-->
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm p-3 p-sm-3 my-5 bg-white rounded position-sticky w-100 py-0"></nav> 
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm p-3 p-sm-3 my-5 bg-white rounded position-sticky w-100 py-0"></nav>
     <!-- this navbar is a placeholder to avoid item overlap-->
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm px-2 mb-5 bg-white rounded fixed-top w-100 py-0">
-        <div class="navbar navbar-expand-lg mx-5 w-100 px-3 py-0" style= "overflow:hidden">
+        <div class="navbar navbar-expand-lg mx-5 w-100 px-3 py-0" style="overflow:hidden">
             <a class="navbar-brand m-auto m-sm-0 p-0" href="#">
                 <div class="pageName p-3 ">
                     <h1>Cefi Menda</h1>
                 </div>
             </a>
-            <button class="navbar-toggler mx-auto m-sm-0 my-2" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler mx-auto m-sm-0 my-2" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarText">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link float-right mr-3 mr-lg-0" href="index.html">About</a>
+                        <a class="nav-link float-right mr-3 mr-lg-0 navbarAbout">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link float-right mr-3 mr-lg-0" href="portfolio.html">Portfolio</a>
+                        <a class="nav-link float-right mr-3 mr-lg-0 navbarPortfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link float-right mr-3 mr-lg-0" href="contact.html">Contact</a>
+                        <a class="nav-link float-right mr-3 mr-lg-0 navbarContact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-<!-- Placeholder to make sure the navbar doesn't go over the main container content -->
-     <div class = "container">
-        <div class="row">
-            <div class="col m-3 m-sm-0 p-sm-0"></div> 
-        </div>
-    </div>
-<!-- Placeholder to make sure the navbar doesn't go over the main container content -->
-
+    <!-- Placeholder to make sure the navbar doesn't go over the main container content -->
     <div class="container">
         <div class="row">
-                <!-- Main Jumbotron -->
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0 pr-md-5">
+            <div class="col m-3 m-sm-0 p-sm-0"></div>
+        </div>
+    </div>
+    <!-- Placeholder to make sure the navbar doesn't go over the main container content -->
+
+    <div id="introCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <!-- Main Jumbotron -->
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0 pr-md-5 d-none">
+                            <div class="card shadow-lg mb-5 border-0" style="width: 100%;">
+                                <div class="card-header">
+                                    <h4>Highlights</h4>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item text-dark">Born and raised in Istanbul, Turkey.</li>
+                                    <li class="list-group-item text-dark">Duke University `16 - Physics Major, Finance and Philosophy Minors.</li>
+                                    <li class="list-group-item text-dark">Energetic entrepreneur, with investments in startups and financial instruments.</li>
+                                    <li class="list-group-item text-dark">Obsessive strategist advising startups.</li>
+                                    <li class="list-group-item text-dark">Currently studying web development at a Columbia University Bootcamp.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 col-lg mx-0 p-0 ">
+                            <div class="jumbotron shadow-lg  w-100 pt-3">
+                                <div class="row">
+                                    <div class="col pt-5">
+                                        <div class="row">
+
+                                            <div class="col-9">
+                                                <div class="shortInfo">
+                                                    <h1 class="display-4 text-light">Hello, world!</h1>
+                                                    <p class='lead text-light'>I am an Entrepreneur, Investor and Full-Stack Engineer living in Brooklyn,
+                                                        New York.</p>
+                                                    <hr class="my-4" style="background:white">
+                                                    <div class="w-100 text-left text-light">
+                                                        <a class="btn btn-outline-light btn-lg text-light aboutMeLearnMore learnMoreButtons" href="#" role="button">Learn more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="thumb">
+                                                    <img src="assets/images/portfolio-image-sketch.png" width="220px" height="280px" class="profileImg" alt="Responsive image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <!-- Main Jumbotron -->
+                        <div class="col-12 col-sm-12 col-md-8 col-lg mx-0 p-0 ">
+                            <div class="jumbotron bg-blue w-100 pt-3">
+                                <div class="row">
+                                    <div class="col pt-5">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="thumb">
+                                                    <img src="assets/images/rocket.jpg" width="200px" height="200px" class="profileImg" alt="Responsive image">
+                                                </div>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="shortInfo">
+                                                    <h1 class="display-4 text-light">My Projects</h1>
+                                                    <p class='lead text-light'>Learn about the startups I co-founded as well as websites and games I
+                                                        built.
+                                                    </p>
+                                                    <hr class="my-4" style="background:white">
+                                                    <div class="w-100 text-left text-dark">
+                                                        <a class="btn btn-outline-light btn-lg text-light portfolioLearnMore learnMoreButtons" href="#" role="button">Learn more
+
+                                                        </a>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+
+                    <div class="col-12 col-sm-12 col-md-8 col-lg mx-0 p-0 ">
+                        <div class="jumbotron shadow-lg bg-yellow  w-100 pt-3">
+                            <div class="row">
+                                <div class="col pt-5">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="thumb">
+                                                <img src="assets/images/contact.jpg" width="200px" height="200px" class="profileImg" alt="Responsive image">
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="shortInfo">
+                                                <h1 class="display-4 text-light">Get in Touch!</h1>
+                                                <p class='lead text-light'>Contact me for partnerships or networking. I love meeting ambitious entrepreneurs!</p>
+                                                <hr class="my-4" style="background:white">
+                                                <div class="w-100 text-left text-light">
+                                                    <a class="btn btn-outline-light btn-lg text-light contactMeLearnMore learnMoreButtons" href="#" role="button">Contact Me</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    </div>
+
+    <div class="container myPortfolio">
+        <div class="row mb-5">
+            <!-- Main Jumbotron -->
+            <div class="col-md-12 mx-0 p-0">
+                <div class="jumbotron shadow-lg bg-white w-100 pt-3">
+                    <div class="row">
+                        <div class="col mb-4 text-center">
+                            <h1 style="color:#ff186d">My Projects</h1>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card  bg-blue  my-3">
+                            <div class="card-header" id="startupsHeading">
+                                <h5 class="mb-0 text-center">
+                                    <button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#startupsCollapse" aria-expanded="false"
+                                        aria-controls="startupsCollapse">
+                                        Startups
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="startupsCollapse" class="collapse" aria-labelledby="startupsHeading" data-parent="#accordionExample">
+                                <div class="row toolsRow bg-light p-4">
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="card text-center mx-auto" style="width: 18rem;">
+                                            <img class="card-img-top" src="assets/images/vamoose.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="https://www.vamoose.it" target="_blank">Vamoose</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="card text-center mx-auto" style="width: 18rem;">
+                                            <img class="card-img-top" src="assets/images/Sapposhop.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="https://www.sapposhop.com" target="_blank">SappoShop</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card bg-blue my-3">
+                            <div class="card-header" id="websitesHeading">
+                                <h5 class="mb-0 text-center ">
+                                    <button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#websitesCollapse" aria-expanded="false"
+                                        aria-controls="websitesCollapse">
+                                        Websites
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="websitesCollapse" class="collapse" aria-labelledby="websitesHeading" data-parent="#accordionExample">
+                                <div class="row toolsRow bg-light p-4">
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="card text-center mx-auto" style="width: 18rem;">
+                                            <img class="card-img-top" src="assets/images/PLUR.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="https://sandynism.github.io/PLUR" target="_blank">PLUR</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="card text-center mx-auto" style="width: 18rem;">
+                                            <img class="card-img-top" src="assets/images/scavenger.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="https://www.scavenger.xyz" target="_blank">Audition Scavenger</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="card text-center mx-auto" style="width: 18rem;">
+                                            <img class="card-img-top" src="assets/images/giphy.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="https://cefimenda.github.io/giphy/" target="_blank">Giphy Search</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card  bg-blue my-3">
+                            <div class="card-header " id="gamesHeading">
+                                <h5 class="mb-0 text-center">
+                                    <button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#gamesCollapse" aria-expanded="false"
+                                        aria-controls="gamesCollapse">
+                                        Games
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="gamesCollapse" class="collapse" aria-labelledby="gamesHeading" data-parent="#accordionExample">
+                                <div class="row gamesRow mb-md-5 bg-light p-4">
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="card text-center mx-auto " style="width: 18rem;">
+                                            <img class="card-img-top" src="assets/images/hangman.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="https://cefimenda.github.io/World-Cup-Hangman/" target="_blank">World Cup Hangman</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="card text-center mx-auto" style="width: 18rem;">
+                                            <img class="card-img-top" src="assets/images/rpgGame.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="https://cefimenda.github.io/unit-4-game/" target="_blank">RPG Game</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="card text-center mx-auto" style="width: 18rem;">
+                                            <img class="card-img-top" src="assets/images/triviaGame.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="https://cefimenda.github.io/TriviaGame/" target="_blank">Trivia Game</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-12 mb-3">
+                                        <div class="card text-center mx-auto" style="width: 18rem;">
+                                            <img class="card-img-top" src="assets/images/RPS.png" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    <a href="https://cefimenda.github.io/RPS-Multiplayer/" target="_blank">Rock Paper Scissors - Multiplayer</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container aboutMe mb-5">
+        <div class="row">
+            <!-- Main Jumbotron -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-0 pr-md-5 d-none">
                 <div class="card shadow-lg mb-5 border-0" style="width: 100%;">
                     <div class="card-header">
                         <h4>Highlights</h4>
@@ -67,42 +375,129 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-8 col-lg-8 mx-0 p-0 " >
+            <div class="col-12 col-sm-12 col-md-8 col-lg mx-0 p-0 ">
+                <div class="jumbotron bg-white shadow-lg  w-100 pt-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col mb-4 text-center">
+                                    <h1 style="color:rgb(11, 11, 65)">About Me</h1>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="thumb">
+                                        <img src="assets/images/portfolio-image.jpg" width="210px" height="280px" class="profileImg" alt="Responsive image">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+
+                                    <div class="longInfo text-justify text-dark">
+                                        <p>Born and raised in Istanbul, Turkey, Cefi grew up in a family of entrepreneurs, observing
+                                            what it takes to succeed day after day. Exposed to the ins and outs of the family
+                                            business, Cefi found himself providing insights in discussions and reading through
+                                            legal deals at a very young age. His obsessively logical nature meant that he
+                                            could easily identify logical discrepencies and offer solutions to inefficient
+                                            processes. </p>
+                                        <p>While still at highschool, Cefi attended a Stanford Education Program for Gifted
+                                            Youth where he pointed out an inconsistency during a quantum eraser experiment,
+                                            thus debunking one of the interpretations of Quantum Mechanics. After the program,
+                                            the professor made changes to his regular Quantum Physics course at Stanford
+                                            University based on Cefi's insights on the experiment.</p>
+                                        <p>Cefi Menda is an entrepreneur with relentless energy, a truly unique per­spective,
+                                            and insatiable hunger for knowledge. In order to follow a liberal arts path,
+                                            Cefi enrolled in Duke University, where his curiosity manifested itself as he
+                                            went on to study physics, and minored in philosophy and finance, while also taking
+                                            courses in many other areas supporting the needs of an entrepreneur including
+                                            computer science, economics, psycholo­gy and linguistics.
+                                        </p>
+                                        <p>Post graduation, Cefi immediately focused all his energy into his entrepre­neurial
+                                            spirit and co-founded 3 businesses, managed investments in bonds and startup
+                                            businesses, while also progressing himself by taking Spanish classes and improving
+                                            his under­standing of the German language. Cefi continued to glean his entrepreneurial
+                                            quest by teaching himself javascript, css, html, the basics of swift and ruby,
+                                            as well as discovering his hidden talents in project management.
+                                        </p>
+                                        <p>Cefi believes that the company you keep and the team you build are the ulti­mate
+                                            decision makers in your success. He has the unique ability to identify talent
+                                            and combine them in a way that highlights their strengths. Cefi proved himself
+                                            by managing and advising talented professionals in an efficient and productive
+                                            manner, allowing startups to move forward while remaining agile. He is an inspirational
+                                            leader who believes that the best way to get people working hard is to unify
+                                            them with a resonant vision. </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container contactMe">
+        <div class="row mb-5">
+            <!-- Main Jumbotron -->
+            <div class="col-md-12 mx-0 p-0">
                 <div class="jumbotron shadow-lg bg-white w-100 pt-3">
                     <div class="row">
-                        <div class="col mb-4">
-                            <h1 style = "color:#4aaaa5">About Me</h1>
+                        <div class="col mb-4 text-center">
+                            <h1 style="color:#ff186d">Contact</h1>
                             <hr>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <img src="assets/images/portfolio-image-sketch.png" width = "220px" height = "280px" class="img-fluid float-sm-left d-block my-3 mx-auto mx-sm-5 my-sm-3" alt="Responsive image">
-                            <p>Born and raised in Istanbul, Turkey, Cefi grew up in a family of entrepreneurs, observing what it takes to succeed day after day. Exposed to the ins and outs of the family business, Cefi found himself providing insights in discussions and reading through legal deals at a very young age. His obsessively logical nature meant that he could easily identify logical discrepencies and offer solutions to inefficient processes. </p>
-                            <p>While still at highschool, Cefi attended a Stanford Education Program for Gifted Youth where he pointed out an inconsistency during a quantum eraser experiment, thus debunking one of the interpretations of Quantum Mechanics. After the program, the professor made changes to his regular Quantum Physics course at Stanford University based on Cefi's insights on the experiment.</p>
-                            <p>Cefi Menda is an entrepreneur with relentless energy, a truly unique per­spective, and insatiable hunger for knowledge. In order to follow a liberal arts path, Cefi enrolled in Duke University, where his curiosity manifested itself as he went on to study physics, and minored in philosophy and finance, while also taking courses in many other areas supporting the needs of an entrepreneur including computer science, economics, psycholo­gy and linguistics. </p>
-                            <p>Post graduation, Cefi immediately focused all his energy into his entrepre­neurial spirit and co-founded 3 businesses, managed the investment of $800,000 into a combination of bonds and startup businesses, while also progressing himself by taking Spanish classes and improving his under­standing of the German language. Cefi continued to glean his entrepreneurial quest by teaching himself javascript, css, html, the basics of swift and ruby, as well as discovering his hidden talents in project management. </p>
-                            <p>Cefi believes that the company you keep and the team you build are the ulti­mate decision makers in your success. He has the unique ability to identify talent and combine them in a way that highlights their strengths. Cefi proved himself by managing and advising talented professionals in an efficient and productive manner, allowing startups to move forward while remaining agile. He is an inspirational leader who believes that the best way to get people working hard is to unify them with a resonant vision. </p>
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="fullName">Full Name</label>
+                                            <input type="text" class="form-control" id="fullName" placeholder="John Doe">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="emailAddress">Email address</label>
+                                            <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="message">Message</label>
+                                            <textarea class="form-control" id="message" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-12">
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <!-- Footer -->
-            <div class="col">
-                <div class ="footer fixed-bottom p-3 w-100 text-light text-center mt-5">
-                    copyright
-                </div>
 
-                <!-- Placeholder to make sure the footer doesn't go over the main container content -->
-                <div class="col">
-                    <div class ="footer p-3 mt-3">
-                </div>
-                <!-- Placeholder to make sure the footer doesn't go over the main container content -->
+    </div>
+    <!-- Footer -->
 
+    <div class="row">
+        <div class="col">
+            <div class="footer fixed-bottom p-3 w-100 text-light text-center">
+                copyright
             </div>
         </div>
     </div>
 </body>
+
 </html>
