@@ -6,13 +6,11 @@ $(function () {
         $(".myPortfolio").show()
         $(".aboutMe").hide()
         $(".contactMe").hide()
-
     })
     $(".aboutMeLearnMore").click(function () {
         $(".myPortfolio").hide()
         $(".aboutMe").show()
         $(".contactMe").hide()
-
     })
     $(".contactMeLearnMore").click(function () {
         $(".myPortfolio").hide()

@@ -35,6 +35,7 @@ body{
 }
 
 .profileImg{
+    transform: scaleX(-1);
 }
 .thumb {
     border-radius:100%;
@@ -55,8 +56,8 @@ body{
     background: #ff186d
 }
 .footer{
-    background-color:#666666;
-    border-top: 5px solid #4aaaa5;
+    background-color:rgb(11, 11, 65);
+    border-top: 5px solid #ff186d;
 }
 .card{
     background:#ff186d;
