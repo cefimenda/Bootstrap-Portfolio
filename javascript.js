@@ -48,7 +48,7 @@ var projects = {
     sapposhop: {
         name: "SappoShop",
         link: "https://www.sapposhop.com",
-        imageRef: "assets/images/sapposhop.png",
+        imageRef: "assets/images/Sapposhop.png",
         type: "startups"
     },
     PLUR: {
