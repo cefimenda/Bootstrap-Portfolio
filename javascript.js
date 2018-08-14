@@ -41,13 +41,13 @@ $(function () {
 var projects = {
     vamoose: {
         name: "Vamoose",
-        link: "www.vamoose.it",
+        link: "https://www.vamoose.it",
         imageRef: "assets/images/vamoose.png",
         type: "startups"
     },
     sapposhop: {
         name: "SappoShop",
-        link: "www.sapposhop.com",
+        link: "https://www.sapposhop.com",
         imageRef: "assets/images/sapposhop.png",
         type: "startups"
     },
