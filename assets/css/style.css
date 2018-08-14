@@ -79,6 +79,9 @@ button[type = "submit"]:hover{
 .bg-light{
     background:white!important;
 }
+.text-red{
+    color: #ff186d!important;
+}
 .mb-4{
     font-family: 'Roboto',"sans-serif";
 }

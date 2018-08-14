@@ -106,7 +106,7 @@ function createProjectCards() {
         console.log("."+projects[id].type+"Row")
         var targetRow = $("."+projects[id].type+"Row")
         console.log(targetRow)
-        var col = $("<div>").addClass("col-md-4 col-12 mb-3")
+        var col = $("<div>").addClass("col-md-4 col-12 mb-3 mt-3 mx-4 p-0")
         targetRow.append(col)
         var card = $("<div>").addClass("card text-center mx-auto")
         card.css({"width": "18rem"})
