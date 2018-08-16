@@ -2,6 +2,13 @@ body{
     background-image: url("../images/background-pattern.png");
     background-attachment: fixed;
 }
+/* .shrink{
+    height:10%;
+    animation:none;
+    animation-name:fade-in;
+    animation-duration:1s;
+    animation-timing-function: ease-in-out;
+} */
 .row:not(:last-of-type){
     animation:none;
     animation-name:fade-in;
@@ -91,6 +98,14 @@ body{
 
 a{
     color: white;
+}
+nav{
+    /* height:100%; */
+    background:transparent;
+    /* animation:none;
+    animation-name:fade-in;
+    animation-duration:1s;
+    animation-timing-function: ease-in-out; */
 }
 @media only screen and (min-width: 992px) {
     .nav-item:last-child{

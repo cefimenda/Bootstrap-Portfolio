@@ -1,0 +1,7 @@
+- Better Landing visual turning into a navbar
+- Enable contact email
+- Finalize my projects section
+- Fix <hr>s on each introcard
+
+Done:
+- Fix Contact card size
