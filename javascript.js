@@ -93,10 +93,7 @@ var projects = {
         imageRef: "assets/images/hangman.png",
         type: "games"
     },
-
-
 }
-
 
 function createProjectCards() {
     $(".startupsRow").empty()
@@ -106,9 +103,9 @@ function createProjectCards() {
         console.log("."+projects[id].type+"Row")
         var targetRow = $("."+projects[id].type+"Row")
         console.log(targetRow)
-        var col = $("<div>").addClass("col-md-4 col-12 mb-3 mt-3 mx-4 p-0")
+        var col = $("<div>").addClass("mb-3 mt-3 mx-4 p-0")
         targetRow.append(col)
-        var card = $("<div>").addClass("card text-center mx-auto")
+        var card = $("<div>").addClass("card shadow text-center mr-3")
         card.css({"width": "18rem"})
         col.append(card)
         var img = $("<img>").addClass("card-img-top")

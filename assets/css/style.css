@@ -83,6 +83,10 @@ button[type = "submit"]:hover{
     background: #db145d;
     color: white;
 }
+.pillArrow{
+    position:absolute;
+    right:30px;
+}
 .bg-light{
     background:white!important;
 }
@@ -109,6 +113,13 @@ nav{
 }
 .navbtn:active{
     outline:none;
+}
+.startupsRow,.websitesRow,.gamesRow{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    max-height: 350px;
+    display: inline-flex;
+    box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.2)
 }
 @media only screen and (min-width: 992px) {
     .nav-item:last-child{
