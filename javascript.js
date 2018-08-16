@@ -70,7 +70,7 @@ var projects = {
         type: "websites"
     },
     RPS: {
-        name: "Rock, Paper, Scissors - Multiplayer",
+        name: "RPS - Multiplayer",
         link: "https://cefimenda.github.io/RPS-Multiplayer/",
         imageRef: "assets/images/RPS.png",
         type: "games"
@@ -116,6 +116,7 @@ function createProjectCards() {
         var title = $("<h5>").addClass("card-title")
         body.append(title)
         var link = $("<a>").attr("href",projects[id].link)
+        link.addClass("project-title")
         link.attr("target","_blank")
         link.text(projects[id].name)
         title.append(link)

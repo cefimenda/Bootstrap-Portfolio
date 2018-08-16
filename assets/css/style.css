@@ -99,6 +99,17 @@ button[type = "submit"]:hover{
 body{
     font-family: 'Arial', 'Helvetica Neue', "Helvetica", "sans-serif";
 }
+.nav-link.bg-blue:hover{
+    background:#ff186d!important;
+    color:white!important;
+}
+.nav-link.bg-blue.active{
+    background:#ff186d!important;
+    color:white!important;
+}
+.project-title:hover{
+    color:white!important;
+}
 
 a{
     color: white;
