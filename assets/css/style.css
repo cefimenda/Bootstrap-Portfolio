@@ -107,6 +107,9 @@ nav{
     animation-duration:1s;
     animation-timing-function: ease-in-out; */
 }
+.navbtn:active{
+    outline:none;
+}
 @media only screen and (min-width: 992px) {
     .nav-item:last-child{
         border-right: 0px;
