@@ -35,38 +35,49 @@ $(function () {
         }, 100)
     })
     $(".nav-link.bg-blue").click(function () {
-        //disable scrolling when animation starts
-        $(".projectsRow").css({
-            'overflow-x': 'hidden'
-        })
-        var cover = $(".cover")
-        
-        cover.animate({
-            width: "100%",
-            padding: "100%"
-        }, 1500, "swing")
-        var target = $(this).text().trim().split(" ")[0].toLowerCase().trim()
-        setTimeout(function () {
-            createProjectCards(target)
-        }, 700)
-
-        $(".cover").animate({
-            width: "0%",
-            padding: "1px"
-        }, 1500, "swing")
-        //enable scrolling when animation ends
-        setTimeout(function(){
+        if (!page.animating) {
+            page.animating=true
+            $(".nav-pills").fadeOut()
+            //disable scrolling when animation starts
             $(".projectsRow").css({
-                'overflow-x': 'scroll'
+                'overflow-x': 'hidden'
             })
-        },3000)
-        
+            var cover = $(".cover")
 
+            cover.animate({
+                width: "100%",
+                padding: "100%"
+            }, 1500, "swing")
+            var target = $(this).text().trim().split(" ")[0].toLowerCase().trim()
+            setTimeout(function () {
+                createProjectCards(target)
+            }, 700)
 
+            $(".cover").animate({
+                width: "0%",
+                padding: "1px"
+            }, 1500, "swing")
+            //enable scrolling when animation ends
+            setTimeout(function () {
+                $(".projectsRow").css({
+                    'overflow-x': 'scroll'
+                })
+                page.animating=false
+                $(".nav-pills").fadeIn()
+            }, 3000)
+        }else{
+            console.log($(this))
+            $(this).addClass("boksuyucikolata")
+            $(this).removeClass("active")
+            $(this).removeClass("boksuyucikolata")
+
+        }
     })
 
 })
-
+var page = {
+    animating: false
+}
 var projects = {
     vamoose: {
         name: "Vamoose",
