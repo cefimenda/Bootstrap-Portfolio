@@ -37,7 +37,11 @@ $(function () {
     $(".nav-link.bg-blue").click(function () {
         if (!page.animating) {
             page.animating=true
-            $(".nav-pills").fadeOut()
+            var pillsList = $(".pills")
+            for (var i =0;i<pillsList.length;i++){
+                $(pillsList[i]).removeClass("active")
+            }
+            $(this).addClass('active')
             //disable scrolling when animation starts
             $(".projectsRow").css({
                 'overflow-x': 'hidden'
@@ -63,17 +67,9 @@ $(function () {
                     'overflow-x': 'scroll'
                 })
                 page.animating=false
-                $(".nav-pills").fadeIn()
             }, 3000)
-        }else{
-            console.log($(this))
-            $(this).addClass("boksuyucikolata")
-            $(this).removeClass("active")
-            $(this).removeClass("boksuyucikolata")
-
         }
     })
-
 })
 var page = {
     animating: false
