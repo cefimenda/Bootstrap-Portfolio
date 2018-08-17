@@ -138,10 +138,7 @@ function createProjectCards(type) {
     $(".projectsDump").empty()
     for (var id in projects) {
         if (projects[id].type == type) {
-            console.log("." + projects[id].type + "Dump")
-
             var targetRow = $(".projectsDump")
-            console.log(targetRow)
             var col = $("<div>").addClass("mb-3 mt-3 mx-4 p-0")
             targetRow.append(col)
             var card = $("<div>").addClass("card shadow text-center mr-3")
@@ -162,13 +159,3 @@ function createProjectCards(type) {
         }
     }
 }
-// <div class="col-md-4 col-12 mb-3">
-//                                         <div class="card text-center mx-auto" style="width: 18rem;">
-//                                             <img class="card-img-top" src="assets/images/vamoose.png" alt="Card image cap">
-//                                             <div class="card-body">
-//                                                 <h5 class="card-title">
-//                                                     <a href="https://www.vamoose.it" target="_blank">Vamoose</a>
-//                                                 </h5>
-//                                             </div>
-//                                         </div>
-//                                     </div>

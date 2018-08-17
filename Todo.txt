@@ -1,5 +1,4 @@
 - Better Landing visual turning into a navbar
-- make mobile responsive
 
 Done:
 - Fix Contact card size
@@ -7,4 +6,5 @@ Done:
 - Finalize my projects section
 - Fix <hr>s on each introcard
 - add animations to projects
+- make mobile responsive
 
