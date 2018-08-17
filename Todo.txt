@@ -1,5 +1,6 @@
 - Better Landing visual turning into a navbar
 - make mobile responsive
+- add animations to proects
 
 Done:
 - Fix Contact card size

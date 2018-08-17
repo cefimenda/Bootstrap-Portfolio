@@ -125,12 +125,27 @@ nav{
 .navbtn:active{
     outline:none;
 }
-.startupsRow,.websitesRow,.gamesRow{
+.cover{
+    padding:1px;
+    width: 0%;
+    height:100%;
+    background:transparent!important;
+}
+.text-blue{
+    color:rgb(11, 11, 65)
+}
+.startupsRow,.websitesRow,.gamesRow,.projectsRow{
     overflow-x: scroll;
     overflow-y: hidden;
-    max-height: 350px;
+    height: 270px;
     display: inline-flex;
     box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.2)
+}
+.startupsDump,.websitesDump,.gamesDump,.projectsDump{
+    display: inline-flex;
+    height:100%;
+    width:100%;
+    min-width:fit-content;
 }
 @media only screen and (min-width: 992px) {
     .nav-item:last-child{

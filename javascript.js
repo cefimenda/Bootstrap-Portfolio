@@ -34,7 +34,36 @@ $(function () {
             })
         }, 100)
     })
-    createProjectCards()
+    $(".nav-link.bg-blue").click(function () {
+        //disable scrolling when animation starts
+        $(".projectsRow").css({
+            'overflow-x': 'hidden'
+        })
+        var cover = $(".cover")
+        
+        cover.animate({
+            width: "100%",
+            padding: "100%"
+        }, 1500, "swing")
+        var target = $(this).text().trim().split(" ")[0].toLowerCase().trim()
+        setTimeout(function () {
+            createProjectCards(target)
+        }, 700)
+
+        $(".cover").animate({
+            width: "0%",
+            padding: "1px"
+        }, 1500, "swing")
+        //enable scrolling when animation ends
+        setTimeout(function(){
+            $(".projectsRow").css({
+                'overflow-x': 'scroll'
+            })
+        },3000)
+        
+
+
+    })
 
 })
 
@@ -95,31 +124,35 @@ var projects = {
     },
 }
 
-function createProjectCards() {
-    $(".startupsRow").empty()
-    $(".websitesRow").empty()
-    $(".gamesRow").empty()
-    for (var id in projects){
-        console.log("."+projects[id].type+"Row")
-        var targetRow = $("."+projects[id].type+"Row")
-        console.log(targetRow)
-        var col = $("<div>").addClass("mb-3 mt-3 mx-4 p-0")
-        targetRow.append(col)
-        var card = $("<div>").addClass("card shadow text-center mr-3")
-        card.css({"width": "18rem"})
-        col.append(card)
-        var img = $("<img>").addClass("card-img-top")
-        img.attr("src",projects[id].imageRef)
-        card.append(img)
-        var body = $("<div>").addClass("card-body")
-        card.append(body)
-        var title = $("<h5>").addClass("card-title")
-        body.append(title)
-        var link = $("<a>").attr("href",projects[id].link)
-        link.addClass("project-title")
-        link.attr("target","_blank")
-        link.text(projects[id].name)
-        title.append(link)
+function createProjectCards(type) {
+    $(".startupsDump").empty()
+    $(".websitesDump").empty()
+    $(".gamesDump").empty()
+    $(".projectsDump").empty()
+    for (var id in projects) {
+        if (projects[id].type == type) {
+            console.log("." + projects[id].type + "Dump")
+
+            var targetRow = $(".projectsDump")
+            console.log(targetRow)
+            var col = $("<div>").addClass("mb-3 mt-3 mx-4 p-0")
+            targetRow.append(col)
+            var card = $("<div>").addClass("card shadow text-center mr-3")
+            card.css({ "width": "18rem" })
+            col.append(card)
+            var img = $("<img>").addClass("card-img-top")
+            img.attr("src", projects[id].imageRef)
+            card.append(img)
+            var body = $("<div>").addClass("card-body")
+            card.append(body)
+            var title = $("<h5>").addClass("card-title")
+            body.append(title)
+            var link = $("<a>").attr("href", projects[id].link)
+            link.addClass("project-title")
+            link.attr("target", "_blank")
+            link.text(projects[id].name)
+            title.append(link)
+        }
     }
 }
 // <div class="col-md-4 col-12 mb-3">
