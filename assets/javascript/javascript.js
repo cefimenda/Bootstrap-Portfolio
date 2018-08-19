@@ -36,9 +36,10 @@ $(function () {
     })
     $(".nav-link.bg-blue").click(function () {
         if (!page.animating) {
-            page.animating=true
+            page.animating = true
+            $(".scrollRightInfo").fadeOut()
             var pillsList = $(".pills")
-            for (var i =0;i<pillsList.length;i++){
+            for (var i = 0; i < pillsList.length; i++) {
                 $(pillsList[i]).removeClass("active")
             }
             $(this).addClass('active')
@@ -46,12 +47,17 @@ $(function () {
             $(".projectsRow").css({
                 'overflow-x': 'hidden'
             })
-            var cover = $(".cover")
 
+            var cover = $(".cover")
+            $(".projectsRow")[0].scroll({
+                left: 0,
+                behavior: "smooth"
+            })
             cover.animate({
                 width: "100%",
                 padding: "100%"
             }, 1500, "swing")
+
             var target = $(this).text().trim().split(" ")[0].toLowerCase().trim()
             setTimeout(function () {
                 createProjectCards(target)
@@ -66,10 +72,18 @@ $(function () {
                 $(".projectsRow").css({
                     'overflow-x': 'scroll'
                 })
-                page.animating=false
+                console.log($(".projectsDump").css('width'))
+                console.log($(".projectsRow").css('width'))
+                if (Number($(".projectsDump").css('width').split("px")[0]) >= Number($(".projectsRow").css('width').split("px")[0])) {
+                    $(".scrollRightInfo").fadeIn()
+                }
+                page.animating = false
             }, 3000)
         }
     })
+    $("#swipe").swipe({
+        allowPageScroll:"horizontal"
+    });
 })
 var page = {
     animating: false

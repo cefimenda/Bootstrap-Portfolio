@@ -13,6 +13,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script type="text/javascript" src="assets/javascript/jquery.touchSwipe.min.js"></script>
     <script src="assets/javascript/javascript.js"></script>
     <script src="assets/javascript/navShrink.js"></script>
     <script src="assets/javascript/formHandler.js"></script>
@@ -32,29 +33,23 @@
                     <h1>Cefi Menda</h1>
                 </div>
             </a>
-            <button class="navbar-toggler mx-auto m-sm-0 my-2" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarText">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-2">
-                        <button class="btn navbtn btn-block mx-0 px-0" onclick="this.blur()">
-                            <a class="nav-link float-right mr-3 mr-lg-0 navbarAbout">About</a>
-                        </button>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <button class="btn navbtn btn-block mx-0 px-0" onclick="this.blur()">
-                            <a class="nav-link float-right mr-3 mr-lg-0 navbarPortfolio">Portfolio</a>
-                        </button>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <button class="btn btn-block navbtn mx-0 px-0" onclick="this.blur()">
-                            <a class="nav-link float-right mr-3 mr-lg-0 navbarContact">Contact</a>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+            <!-- <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-2">
+                    <button class="btn navbtn btn-block mx-0 px-0" onclick="this.blur()">
+                        <a class="nav-link float-right mr-3 mr-lg-0 navbarAbout">About</a>
+                    </button>
+                </li>
+                <li class="nav-item mx-2">
+                    <button class="btn navbtn btn-block mx-0 px-0" onclick="this.blur()">
+                        <a class="nav-link float-right mr-3 mr-lg-0 navbarPortfolio">Portfolio</a>
+                    </button>
+                </li>
+                <li class="nav-item mx-2">
+                    <button class="btn btn-block navbtn mx-0 px-0" onclick="this.blur()">
+                        <a class="nav-link float-right mr-3 mr-lg-0 navbarContact">Contact</a>
+                    </button>
+                </li>
+            </ul> -->
         </div>
     </nav>
     <!-- Placeholder to make sure the navbar doesn't go over the main container content -->
@@ -233,11 +228,14 @@
                                 <div class="projectsRow">
                                     <div class="cover">
                                     </div>
-                                    <div class="projectsDump">
+                                    <div class="projectsDump" id="swipe">
                                         <h2 class="text-blue mx-auto mt-5 pt-5">Select a category to view related projects.</h2>
                                     </div>
                                 </div>
                             </div>
+                            <p class="text-right scrollRightInfo">
+                                <em>Scroll right>></em>
+                            </p>
                         </div>
                     </div>
                 </div>
