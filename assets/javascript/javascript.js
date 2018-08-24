@@ -89,6 +89,12 @@ var page = {
     animating: false
 }
 var projects = {
+    liri:{
+        name: "LIRI",
+        link: "https://github.com/cefimenda/liri-node-app",
+        imageRef: "assets/images/liri.png",
+        type: "games"
+    },
     vamoose: {
         name: "Vamoose",
         link: "https://www.vamoose.it",
@@ -143,6 +149,7 @@ var projects = {
         imageRef: "assets/images/hangman.png",
         type: "games"
     },
+
 }
 
 function createProjectCards(type) {
