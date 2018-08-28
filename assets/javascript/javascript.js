@@ -90,7 +90,7 @@ var page = {
 }
 var projects = {
     projections:{
-        name:"Financial Projections Builder",
+        name:"Projections Builder",
         link:"https://docs.google.com/spreadsheets/d/1Xjq8KEABuv9WVhshuWG8TGJLglfgXg9oJEJV_Q-548M/edit?usp=sharing",
         imageRef:"assets/images/Projections.png",
         type:"tools"

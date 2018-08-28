@@ -183,6 +183,15 @@ nav{
 
 }
 
+@media only screen and (max-width: 500px) {
+    .pills{
+        font-size: 12px
+    }
+    .lead{
+        font-size: 20px
+    }
+
+}
 @keyframes fade-in{
     from {opacity: 0;}
     to {opacity: 1;}
