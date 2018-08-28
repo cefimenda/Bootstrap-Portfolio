@@ -114,6 +114,21 @@ body{
 a{
     color: white;
 }
+
+.linkedinLink{
+    color:#007bff
+}
+.linkedinLink:hover{
+    text-decoration: none
+}
+.githubLink{
+    color:rgb(95, 95, 95)
+}
+.githubLink:hover{
+    color:black;
+    text-decoration: none
+
+}
 nav{
     /* height:100%; */
     background:transparent;
