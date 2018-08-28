@@ -82,18 +82,24 @@ $(function () {
         }
     })
     $("#swipe").swipe({
-        allowPageScroll:"horizontal"
+        allowPageScroll: "horizontal"
     });
 })
 var page = {
     animating: false
 }
 var projects = {
-    liri:{
+    projections:{
+        name:"Financial Projections Builder",
+        link:"https://docs.google.com/spreadsheets/d/1Xjq8KEABuv9WVhshuWG8TGJLglfgXg9oJEJV_Q-548M/edit?usp=sharing",
+        imageRef:"assets/images/Projections.png",
+        type:"tools"
+    },
+    liri: {
         name: "LIRI",
-        link: "https://github.com/cefimenda/liri-node-app",
+        github: "https://github.com/cefimenda/liri-node-app",
         imageRef: "assets/images/liri.png",
-        type: "games"
+        type: "tools"
     },
     vamoose: {
         name: "Vamoose",
@@ -110,6 +116,7 @@ var projects = {
     PLUR: {
         name: "PLUR",
         link: "https://sandynism.github.io/PLUR/",
+        github: "https://github.com/Sandynism/PLUR",
         imageRef: "assets/images/PLUR.png",
         type: "websites"
     },
@@ -121,30 +128,35 @@ var projects = {
     },
     giphySearch: {
         name: "Giphy Search",
+        github: "https://github.com/cefimenda/Giphy",
         link: "https://cefimenda.github.io/giphy/",
         imageRef: "assets/images/giphy.png",
         type: "websites"
     },
     RPS: {
         name: "RPS - Multiplayer",
+        github: "https://github.com/cefimenda/RPS-Multiplayer/",
         link: "https://cefimenda.github.io/RPS-Multiplayer/",
         imageRef: "assets/images/RPS.png",
         type: "games"
     },
     RPG: {
         name: "RPG Game",
+        github: "https://github.com/cefimenda/unit-4-game",
         link: "https://cefimenda.github.io/unit-4-game/",
         imageRef: "assets/images/rpgGame.png",
         type: "games"
     },
     triviaGame: {
         name: "Trivia Game",
+        github: "https://github.com/cefimenda/TriviaGame",
         link: "https://cefimenda.github.io/TriviaGame/",
         imageRef: "assets/images/triviaGame.png",
         type: "games"
     },
     hangman: {
         name: "World Cup Hangman",
+        github: "https://github.com/cefimenda/World-Cup-Hangman",
         link: "https://cefimenda.github.io/World-Cup-Hangman/",
         imageRef: "assets/images/hangman.png",
         type: "games"
@@ -163,20 +175,76 @@ function createProjectCards(type) {
             var col = $("<div>").addClass("mb-3 mt-3 mx-4 p-0")
             targetRow.append(col)
             var card = $("<div>").addClass("card shadow text-center mr-3")
-            card.css({ "width": "18rem" })
+            card.css({
+                "width": "18rem",
+                "height": "250.172px"
+            })
             col.append(card)
             var img = $("<img>").addClass("card-img-top")
             img.attr("src", projects[id].imageRef)
+            img.css({
+                "height":"150.172px"
+            })
             card.append(img)
             var body = $("<div>").addClass("card-body")
             card.append(body)
             var title = $("<h5>").addClass("card-title")
             body.append(title)
+
             var link = $("<a>").attr("href", projects[id].link)
             link.addClass("project-title")
             link.attr("target", "_blank")
             link.text(projects[id].name)
             title.append(link)
+
+            if (projects[id].link && projects[id].github) {
+                var symbolRow = $("<div>").addClass("row")
+                card.append(symbolRow)
+
+                var viewCol = $("<div>").addClass("col-6 pl-5 border-right")
+                symbolRow.append(viewCol)
+                var gitCol = $("<div>").addClass("col-6 pr-5")
+                symbolRow.append(gitCol)
+
+                var viewAnc = $("<a>").attr("href", projects[id].link)
+                viewAnc.attr("target", "_blank")
+                viewCol.append(viewAnc)
+                var viewImg = $("<i>").addClass("fas fa-eye fa-lg")
+                viewAnc.append(viewImg)
+
+                var gitAnc = $("<a>").attr("href", projects[id].github)
+                gitAnc.attr("target", "_blank")
+                gitCol.append(gitAnc)
+                var gitImg = $("<i>").addClass("fab fa-github fa-lg")
+                gitAnc.append(gitImg)
+            }
+            else if (projects[id].link) {
+                var symbolRow = $("<div>").addClass("row")
+                card.append(symbolRow)
+
+                var viewCol = $("<div>").addClass("col-12")
+                symbolRow.append(viewCol)
+
+                var viewAnc = $("<a>").attr("href", projects[id].link)
+                viewAnc.attr("target", "_blank")
+                viewCol.append(viewAnc)
+                var viewImg = $("<i>").addClass("fas fa-eye fa-lg")
+                viewAnc.append(viewImg)
+            }
+            else if (projects[id].github) {
+                var symbolRow = $("<div>").addClass("row")
+                card.append(symbolRow)
+
+                var gitCol = $("<div>").addClass("col-12")
+                symbolRow.append(gitCol)
+
+                var gitAnc = $("<a>").attr("href", projects[id].github)
+                gitAnc.attr("target", "_blank")
+                gitCol.append(gitAnc)
+                var gitImg = $("<i>").addClass("fab fa-github fa-lg")
+                gitAnc.append(gitImg)
+            }
+
         }
     }
 }
