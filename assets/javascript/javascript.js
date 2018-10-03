@@ -89,6 +89,7 @@ var page = {
     animating: false
 }
 var projects = {
+
     projections:{
         name:"Projections Builder",
         link:"https://docs.google.com/spreadsheets/d/1Xjq8KEABuv9WVhshuWG8TGJLglfgXg9oJEJV_Q-548M/edit?usp=sharing",
@@ -125,6 +126,13 @@ var projects = {
         link: "https://www.scavenger.xyz",
         imageRef: "assets/images/scavenger.png",
         type: "websites"
+    },
+    helpFinder:{
+        name:"Help Finder",
+        link:"https://help-finder.herokuapp.com/",
+        github:"https://github.com/cefimenda/help-finder",
+        imageRef:"assets/images/helpFinder.png",
+        type:"websites"
     },
     giphySearch: {
         name: "Giphy Search",
