@@ -28,8 +28,12 @@ body{
     background-color: white;
     color: #ff186d;
     font-size: 30px;
-    font-family: 'Roboto',"sans-serif";
+    font-family:"Source Sans Pro",sans-serif !important;
 
+}
+.display-4{
+    font-family:"Source Sans Pro",sans-serif !important;
+    font-size:45px;
 }
 .bg-yellow{
     background:sandybrown!important
@@ -40,7 +44,9 @@ body{
 .text-dark{
     color:rgb(11, 11, 65)!important;
 }
-
+.text-yellow{
+    color:sandybrown!important;
+}
 .profileImg{
     transform: scaleX(-1);
 }
@@ -74,13 +80,13 @@ collapse{
     background:darkblue;
 }
 button[type = "submit"]{
-    background: #ff186d;
+    background:sandybrown;
     color: white;
     border: 0px;
     width:100%
 }
 button[type = "submit"]:hover{
-    background: #db145d;
+    background: rgb(214, 140, 76);
     color: white;
 }
 .pillArrow{

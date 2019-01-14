@@ -134,13 +134,13 @@ var projects = {
         imageRef:"assets/images/helpFinder.png",
         type:"websites"
     },
-    giphySearch: {
-        name: "Giphy Search",
-        github: "https://github.com/cefimenda/Giphy",
-        link: "https://cefimenda.github.io/giphy/",
-        imageRef: "assets/images/giphy.png",
-        type: "websites"
-    },
+    // giphySearch: {
+    //     name: "Giphy Search",
+    //     github: "https://github.com/cefimenda/Giphy",
+    //     link: "https://cefimenda.github.io/giphy/",
+    //     imageRef: "assets/images/giphy.png",
+    //     type: "websites"
+    // },
     RPS: {
         name: "RPS - Multiplayer",
         github: "https://github.com/cefimenda/RPS-Multiplayer/",
