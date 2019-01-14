@@ -109,10 +109,7 @@ body{
     background:#ff186d!important;
     color:white!important;
 }
-.nav-link.bg-blue.active{
-    background:#ff186d!important;
-    color:white!important;
-}
+
 .project-title:hover{
     color:white!important;
 }
@@ -146,6 +143,30 @@ nav{
 .navbtn:active{
     outline:none;
 }
+.btn-text{
+    outline:none;
+    border-color:transparent;
+    border-bottom: 1px solid transparent;
+    text-align: center;
+}
+.btn-text:hover{
+    border-bottom: 1px solid rgb(11, 11, 65) !important;
+}
+.btn-text:focus{
+    outline:none !important;
+    border-bottom: 1px solid rgb(11, 11, 65) !important;
+}
+.btn-text:active{
+    outline: none !important;
+    border: none !important;
+    border-bottom: 1px solid rgb(11, 11, 65) !important;
+
+}
+.pills{
+    text-align:center;
+    margin: 0 !important;
+    padding:0 !important;
+}
 .cover{
     padding:1px;
     width: 0%;
@@ -153,7 +174,7 @@ nav{
     background:transparent!important;
 }
 .navPillsContainer{
-    height:66px
+    height:auto;
 }
 .text-blue{
     color:rgb(11, 11, 65)
@@ -163,23 +184,30 @@ nav{
     overflow-y: hidden;
     height: 280px;
     display: inline-flex;
-    box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.2)
 }
 .startupsDump,.websitesDump,.gamesDump,.projectsDump{
     display: inline-flex;
     height:100%;
     width:100%;
-    min-width:fit-content;
+    /* min-width:fit-content; */
+}
+.projectsContainer{
+    min-height: 500px;
+
 }
 .scrollRightInfo{
     display:none;
+}
+.activePill{
+    border-bottom: 2px solid rgb(11, 11, 65) !important;
+
 }
 @media only screen and (min-width: 992px) {
     .nav-item:last-child{
         border-right: 0px;
     }
     .navPillsContainer{
-        height:288px
+        height:auto;
     }
 }
 @media only screen and (max-width: 640px) {
@@ -201,4 +229,8 @@ nav{
 @keyframes fade-in{
     from {opacity: 0;}
     to {opacity: 1;}
+}
+@keyframes fade-out{
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
