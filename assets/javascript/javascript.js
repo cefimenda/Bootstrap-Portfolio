@@ -255,8 +255,8 @@ let sliderBegin = () => {
     var slide = $("#macbookSlide")
     slideInterval = setInterval(function () {
         slide.fadeOut();
-        setTimeout(slideChange, 500, slide)
-    }, 3000)
+        setTimeout(slideChange, 400, slide)
+    }, 4000)
 }
 
 let slideChange = (slide) => {
@@ -274,7 +274,7 @@ let slideChange = (slide) => {
     }
     if (project.type === "startups" || project.type === "full-stack") {
         slide.attr("src", projects[key].imageRef)
-        slide.fadeIn()
+        setTimeout(function(){slide.fadeIn()},300)
         page.slideNumber++
         return
     } else {
