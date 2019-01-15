@@ -76,7 +76,7 @@ var projects = {
         name: "Courier",
         github: "https://github.com/daleP1988/courier",
         link: "https://courier-heroku-app.herokuapp.com/",
-        imageRef: "assets/images/courier.png",
+        imageRef: "assets/images/courier.jpg",
         type: "full-stack"
     },
     projections: {
@@ -94,13 +94,13 @@ var projects = {
     vamoose: {
         name: "Vamoose",
         link: "https://www.vamoose.it",
-        imageRef: "assets/images/vamoose.png",
+        imageRef: "assets/images/vamoose.jpg",
         type: "startups"
     },
     sapposhop: {
         name: "SappoShop",
         link: "https://www.sapposhop.com",
-        imageRef: "assets/images/Sapposhop.png",
+        imageRef: "assets/images/Sapposhop.jpg",
         type: "startups"
     },
     auditionScavenger: {
@@ -114,7 +114,7 @@ var projects = {
         name: "PLUR",
         link: "https://sandynism.github.io/PLUR/",
         github: "https://github.com/Sandynism/PLUR",
-        imageRef: "assets/images/PLUR.png",
+        imageRef: "assets/images/PLUR.jpg",
         type: "full-stack"
     },
     helpFinder: {
