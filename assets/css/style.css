@@ -100,6 +100,8 @@ body{
 .card{
     background:rgb(11, 11, 65)!important;
     color: white;
+    width:256px;
+    height:250px;
 }
 collapse{
     background:darkblue;
@@ -239,8 +241,20 @@ nav{
     .pageName{
     width:100%;
     }
+    
 
 }
+
+@media only screen and (max-width: 800px) {
+    .pageName{
+    width:100%;
+    }
+    .card-title{
+        font-size:1rem;
+    }
+}
+
+
 
 @media only screen and (max-width: 500px) {
     .pills{

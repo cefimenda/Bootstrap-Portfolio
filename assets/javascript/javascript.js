@@ -48,6 +48,7 @@ $(function () {
     })
     $(".pillButton").click(function () {
         var target = $(this).text().trim().split(" ")[0].toLowerCase().trim();
+        clearInterval(slideInterval)
         createProjectCards(target);
         var pillsList = $(".pillButton")
         for (var i = 0; i < pillsList.length; i++) {
@@ -167,7 +168,7 @@ function createProjectCards(type) {
     setTimeout(function () {
         for (var id in projects) {
             if (projects[id].type == type) {
-                var col = $("<div>").addClass("col-4 mb-3")
+                var col = $("<div>").addClass("col-lg-4 col-md-6 col-12 mb-3")
                 col.css({
                     "width": "18rem",
                     "height": "250.172px",
