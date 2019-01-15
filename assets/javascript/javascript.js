@@ -105,7 +105,7 @@ var projects = {
     },
     auditionScavenger: {
         name: "Audition Scavenger",
-        link: "https://scavenger.xyz",
+        link: "http://www.scavenger.xyz",
         github: "https://github.com/cefimenda/scraper",
         imageRef: "assets/images/scavenger.png",
         type: "full-stack"
