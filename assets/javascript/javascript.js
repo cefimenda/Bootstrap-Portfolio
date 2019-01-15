@@ -6,6 +6,15 @@ $(function () {
         $(".myPortfolio").show()
         $(".aboutMe").hide()
         $(".contactMe").hide()
+
+        $(".projectsDisplay").empty()
+        page.slideNumber = 1;
+        
+        $(".projectsDisplay").append(`<div id="macbook" class="col-12 col-lg-6 mx-auto"><img id="macbook-img" src="assets/images/macbook.png"><div id="slideContainer">
+        <img id="macbookSlide" src="assets/images/code-penguin.png"></div></div><div class="col-12 col-lg-6"><h1 class="mx-auto display-4 display-4-sm mt-lg-5 text-center">Select a category to view projects!</h1></div>`);
+        
+        sliderBegin();
+
     })
     $(".aboutMeLearnMore").click(function () {
         $(".myPortfolio").hide()
@@ -42,57 +51,30 @@ $(function () {
             $(pillsList[i]).removeClass("activePill")
         }
         $(this).addClass('activePill')
-        // if (!page.animating) {
-        //     page.animating = true
-        //     $(".scrollRightInfo").fadeOut()
-        //     
-        //     //disable scrolling when animation starts
-        //     $(".projectsRow").css({
-        //         'overflow-x': 'hidden'
-        //     })
 
-        //     var cover = $(".cover")
-        //     $(".projectsRow")[0].scroll({
-        //         left: 0,
-        //         behavior: "smooth"
-        //     })
-        //     cover.animate({
-        //         width: "100%",
-        //         padding: "100%"
-        //     }, 1500, "swing")
-
-        //     var target = $(this).text().trim().split(" ")[0].toLowerCase().trim()
-        //     setTimeout(function () {
-        //         createProjectCards(target)
-        //     }, 700)
-
-        //     $(".cover").animate({
-        //         width: "0%",
-        //         padding: "1px"
-        //     }, 1500, "swing")
-        //     //enable scrolling when animation ends
-        //     setTimeout(function () {
-        //         $(".projectsRow").css({
-        //             'overflow-x': 'scroll'
-        //         })
-        //         console.log($(".projectsDump").css('width'))
-        //         console.log($(".projectsRow").css('width'))
-        //         if (Number($(".projectsDump").css('width').split("px")[0]) >= Number($(".projectsRow").css('width').split("px")[0])) {
-        //             $(".scrollRightInfo").fadeIn()
-        //         }
-        //         page.animating = false
-        //     }, 3000)
-        // }
     })
     $("#swipe").swipe({
         allowPageScroll: "horizontal"
     });
 })
 var page = {
-    animating: false
+    animating: false,
+    slideNumber: 1
 }
 var projects = {
-
+    codePenguin: {
+        name: "Code Penguin",
+        github: "https://github.com/cefimenda/code-penguin",
+        imageRef: "assets/images/code-penguin.png",
+        type: "full-stack"
+    },
+    courier: {
+        name: "Courier",
+        github: "https://github.com/daleP1988/courier",
+        link: "https://courier-heroku-app.herokuapp.com/",
+        imageRef: "assets/images/courier.png",
+        type: "full-stack"
+    },
     projections: {
         name: "Projections Builder",
         link: "https://docs.google.com/spreadsheets/d/1Xjq8KEABuv9WVhshuWG8TGJLglfgXg9oJEJV_Q-548M/edit?usp=sharing",
@@ -117,18 +99,19 @@ var projects = {
         imageRef: "assets/images/Sapposhop.png",
         type: "startups"
     },
+    auditionScavenger: {
+        name: "Audition Scavenger",
+        link: "https://www.scavenger.xyz",
+        github: "https://github.com/cefimenda/scraper",
+        imageRef: "assets/images/scavenger.png",
+        type: "full-stack"
+    },
     PLUR: {
         name: "PLUR",
         link: "https://sandynism.github.io/PLUR/",
         github: "https://github.com/Sandynism/PLUR",
         imageRef: "assets/images/PLUR.png",
-        type: "websites"
-    },
-    auditionScavenger: {
-        name: "Audition Scavenger",
-        link: "https://www.scavenger.xyz",
-        imageRef: "assets/images/scavenger.png",
-        type: "websites"
+        type: "full-stack"
     },
     helpFinder: {
         name: "Help Finder",
@@ -137,13 +120,13 @@ var projects = {
         imageRef: "assets/images/helpFinder.png",
         type: "websites"
     },
-    // giphySearch: {
-    //     name: "Giphy Search",
-    //     github: "https://github.com/cefimenda/Giphy",
-    //     link: "https://cefimenda.github.io/giphy/",
-    //     imageRef: "assets/images/giphy.png",
-    //     type: "websites"
-    // },
+    giphySearch: {
+        name: "Giphy Search",
+        github: "https://github.com/cefimenda/Giphy",
+        link: "https://cefimenda.github.io/giphy/",
+        imageRef: "assets/images/giphy.png",
+        type: "websites"
+    },
     RPS: {
         name: "RPS - Multiplayer",
         github: "https://github.com/cefimenda/RPS-Multiplayer/",
@@ -172,7 +155,6 @@ var projects = {
         imageRef: "assets/images/hangman.png",
         type: "games"
     },
-
 }
 
 function createProjectCards(type) {
@@ -263,4 +245,37 @@ function createProjectCards(type) {
     }, 500)
 
 
+}
+var slideInterval;
+let sliderBegin = () => {
+    var slide = $("#macbookSlide")
+    slideInterval = setInterval(function () {
+        slide.fadeOut();
+        setTimeout(slideChange, 500, slide)
+    }, 3000)
+}
+
+let slideChange = (slide) => {
+    var key = Object.keys(projects)[page.slideNumber]
+    var project = projects[key]
+    if (!project) {
+        page.slideNumber = 0
+        slideChange(slide)
+        return
+    }
+    if (page.slideNumber >= Object.keys(projects).length) {
+        page.slideNumber = 0
+        slideChange(slide)
+        return
+    }
+    if (project.type === "startups" || project.type === "full-stack") {
+        slide.attr("src", projects[key].imageRef)
+        slide.fadeIn()
+        page.slideNumber++
+        return
+    } else {
+        page.slideNumber++
+        slideChange(slide)
+        return
+    }
 }

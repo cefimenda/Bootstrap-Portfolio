@@ -15,6 +15,28 @@ body{
     animation-duration:1s;
     animation-timing-function: ease-in-out;
 }
+#slideContainer{
+    position:absolute;
+    top:15px;
+    left:44px;
+    z-index: 0;
+}
+#macbookSlide{
+    height:154px;
+    width:260px;
+}
+#macbook{
+    position: relative;
+    padding: 0;
+    flex: 0;
+    max-width: -webkit-fill-available;
+}
+#macbook-img{
+    position: relative;
+    height:200px;
+    z-index: 1;
+}
+
 .myPortfolio{
     display:none;
 }
@@ -34,6 +56,9 @@ body{
 .display-4{
     font-family:"Source Sans Pro",sans-serif !important;
     font-size:45px;
+}
+.display-4-sm{
+    font-size: 30px;
 }
 .bg-yellow{
     background:sandybrown!important
@@ -73,7 +98,7 @@ body{
     border-top: 5px solid #ff186d;
 }
 .card{
-    background:#ff186d;
+    background:rgb(11, 11, 65)!important;
     color: white;
 }
 collapse{
@@ -224,7 +249,20 @@ nav{
     .lead{
         font-size: 17px
     }
-
+    .display-4-sm{
+        font-size:30px
+    }
+    #macbook-img{
+        height: 150px;
+    }
+    #macbookSlide{
+        height: 115px;
+        width: 195px;
+    }
+    #slideContainer{
+        top: 13px;
+        left: 34px;
+    }
 }
 @keyframes fade-in{
     from {opacity: 0;}
