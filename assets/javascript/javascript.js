@@ -6,7 +6,10 @@ $(function () {
         $(".myPortfolio").show()
         $(".aboutMe").hide()
         $(".contactMe").hide()
-
+        var pillsList = $(".pillButton")
+        for (var i = 0; i < pillsList.length; i++) {
+            $(pillsList[i]).removeClass("activePill")
+        }
         $(".projectsDisplay").empty()
         page.slideNumber = 1;
         
