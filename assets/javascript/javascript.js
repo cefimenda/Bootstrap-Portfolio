@@ -14,7 +14,8 @@ $(function () {
         page.slideNumber = 1;
         
         $(".projectsDisplay").append(`<div id="macbook" class="col-12 col-lg-6 mx-auto"><img id="macbook-img" src="assets/images/macbook.png"><div id="slideContainer">
-        <img id="macbookSlide" src="assets/images/code-penguin.png"></div></div><div class="col-12 col-lg-6"><h1 class="mx-auto display-4 display-4-sm mt-lg-5 text-center">Select a category to view projects!</h1></div>`);
+        <img id="macbookSlide" src="assets/images/code-penguin.png"></div></div><div class="col-12 col-lg-6"><h1 class="mx-auto display-4 display-4-sm text-center my-0">Select a category to start!</h1>
+        <br><p class = "px-3" > Many of the projects displayed here were completed during my bootcamp at Columbia University and they all display different skills that I have learned and practiced up to now. While some of the projects are as simple as a front-end only game others can be as complicated as creating a distributed and decentralized system. </p></div>`);
         
         sliderBegin();
 
