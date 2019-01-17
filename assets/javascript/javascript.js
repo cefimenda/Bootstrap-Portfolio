@@ -100,6 +100,19 @@ var page = {
     slideNumber: 1
 }
 var projects = {
+    mysqlSimplified:{
+        name:"MySQL Simplified",
+        github:"https://github.com/cefimenda/mysql-simplified",
+        link:"https://www.npmjs.com/package/mysql-simplified",
+        imageRef: "assets/images/mysql-simplified.png",
+        type:"Tools",
+        info:{
+            short:"An Easy to Use MySQL Wrapper",
+            detail:"Mysql-simplified is a wrapper for the mysql node package that enables interacting with mysql databases only using javascript. It offers an easy to use alternative to Sequelize for beginner coders who just need to use basic database functionalities.",
+            tech:["Node","MySQL"],
+            date:"Sep 2018"
+        }
+    },
     codePenguin: {
         name: "Code Penguin",
         github: "https://github.com/cefimenda/code-penguin",
