@@ -108,7 +108,7 @@ var projects = {
         info:{
             short:"Ecosystem where coders help coders",
             detail:"Code-Penguin is a decentralized and distributed closed economy built on holochain, where coders can either create tasks for others to solve or complete existing tasks in exchange for tokens called pebbles.",
-            tech:["Holochain"],
+            tech:["Holochain", "React.js"],
             date:"Dec 2018"
         }
     },
@@ -121,7 +121,7 @@ var projects = {
         info: {
             short: "Bulk Email Sender",
             detail: "Courier utilizes google scripts to allow users to send bulk emails that will never be considered spam or promotion and will always fall into the recepient's mailbox straightaway!",
-            tech: ["GSheets", "GScripts","Express"],
+            tech: ["GSheets", "GScripts","Express","MJML"],
             date: "Oct 2018"
         }
     },
