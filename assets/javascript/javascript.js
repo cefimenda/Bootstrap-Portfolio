@@ -182,7 +182,7 @@ var projects = {
         info:{
             short:"Second Hand Furniture Marketplace",
             detail:"SappoShop is a Boston based secondhand furniture marketplace that purchases high quality furniture from customers that are moving out and sells them to the local population.",
-            tech:["Co-Founder"],
+            tech:["Co-Founder, Technical Advisor"],
             date:"2016-2017"
         }
     },
