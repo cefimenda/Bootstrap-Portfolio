@@ -109,7 +109,7 @@ var projects = {
         info:{
             short:"An Easy to Use MySQL Wrapper",
             detail:"Mysql-simplified is a wrapper for the mysql node package that enables interacting with mysql databases only using javascript. It offers an easy to use alternative to Sequelize for beginner coders who just need to use basic database functionalities.",
-            tech:["Node","MySQL"],
+            tech:["Node","MySQL","Technical Documentation"],
             date:"Sep 2018"
         }
     },
